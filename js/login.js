@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
 });
 
 //funcion que se ejecuta luego de luego de clickear el boton Ingrear
-document.getElementsByClassName("send").addEventListener("click", function () {
+document.getElementsById("submit").addEventListener("click", function () {
 
-    // captura los datos de los input correo, contraseña y el boton Google Sing In
+    // captura los datos de los input correo, contraseña
     var corr = document.getElementById("inputEmail").value;
     var contra = document.getElementById("inputPassword").value;
-    var singin = document.getElementsByClassName("g-signin2").value
+    
     // guarda los datos en session storage
     sessionStorage.setItem("Dirección correo electronico", corr);
     sessionStorage.setItem("Contraseña", contra);
