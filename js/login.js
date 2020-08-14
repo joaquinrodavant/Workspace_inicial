@@ -26,6 +26,8 @@ function onSignIn(googleUser) {
     console.log('Family Name: ' + profile.getFamilyName());
     console.log("Image URL: " + profile.getImageUrl());
     console.log("Email: " + profile.getEmail());
+    //guarda lo datos del perfil en el session storage
+    sessionStorage.setItem("Perfil", profile);
 
     // The ID token you need to pass to your backend:
     var id_token = googleUser.getAuthResponse().id_token;
@@ -34,9 +36,5 @@ function onSignIn(googleUser) {
 
 onSignIn();
 
-document.getElementById("singin").addEventListener("click", function () {
-//obtiene los datos del sing in
-var sing= profile;
-//los guarda en el session storage
-sessionStorage.setItem("Perfil", sing);
-});
+
+
