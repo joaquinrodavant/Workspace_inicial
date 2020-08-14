@@ -11,12 +11,10 @@ document.getElementsById("submit").addEventListener("click", function () {
     // captura los datos de los input correo, contraseña
     var corr = document.getElementById("inputEmail").value;
     var contra = document.getElementById("inputPassword").value;
-    
+
     // guarda los datos en session storage
     sessionStorage.setItem("Dirección correo electronico", corr);
     sessionStorage.setItem("Contraseña", contra);
-    sessionStorage.setItem("Sing In", singin);
-
 });
 
 function onSignIn(googleUser) {
@@ -31,6 +29,6 @@ function onSignIn(googleUser) {
     // The ID token you need to pass to your backend:
     var id_token = googleUser.getAuthResponse().id_token;
     console.log("ID Token: " + id_token);
-  }
+}
 
-  onSignIn();
+onSignIn();
