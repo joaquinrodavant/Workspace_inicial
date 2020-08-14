@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 });
 
 //funcion que se ejecuta luego de luego de clickear el boton Ingrear
-document.getElementsById("submit").addEventListener("click", function () {
+document.getElementById("submit").addEventListener("click", function () {
 
     // captura los datos de los input correo, contraseña
     var corr = document.getElementById("inputEmail").value;
