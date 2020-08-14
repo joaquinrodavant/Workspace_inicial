@@ -11,6 +11,7 @@ document.getElementById("submit").addEventListener("click", function () {
     // captura los datos de los input correo, contraseña
     var corr = document.getElementById("inputEmail").value;
     var contra = document.getElementById("inputPassword").value;
+    
 
     // guarda los datos en session storage
     sessionStorage.setItem("Dirección correo electronico", corr);
@@ -32,3 +33,9 @@ function onSignIn(googleUser) {
 }
 
 onSignIn();
+
+//obtiene los datos del sing in
+var sing= profile.value;
+//los guarda en el session storage
+sessionStorage.setItem("Perfil", sing);
+    
