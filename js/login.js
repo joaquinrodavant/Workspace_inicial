@@ -34,8 +34,9 @@ function onSignIn(googleUser) {
 
 onSignIn();
 
+document.getElementById("singin").addEventListener("click", function () {
 //obtiene los datos del sing in
-var sing= profile.getId;
+var sing= profile;
 //los guarda en el session storage
 sessionStorage.setItem("Perfil", sing);
-    
+});
