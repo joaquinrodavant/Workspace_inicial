@@ -31,4 +31,4 @@ function onSignIn(googleUser) {
     console.log("ID Token: " + id_token);
 }
 
-onSignIn(googleUser);
+onSignIn();
