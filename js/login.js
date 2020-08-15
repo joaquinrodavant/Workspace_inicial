@@ -11,7 +11,7 @@ document.getElementById("submit").addEventListener("click", function () {
     // captura los datos de los input correo, contraseña
     var corr = document.getElementById("inputEmail").value;
     var contra = document.getElementById("inputPassword").value;
-    
+
 
     // guarda los datos en session storage
     sessionStorage.setItem("Dirección correo electronico", corr);
@@ -26,18 +26,12 @@ function onSignIn(googleUser) {
     console.log('Family Name: ' + profile.getFamilyName());
     console.log("Image URL: " + profile.getImageUrl());
     console.log("Email: " + profile.getEmail());
-    
+
     // The ID token you need to pass to your backend:
     var id_token = googleUser.getAuthResponse().id_token;
     console.log("ID Token: " + id_token);
 }
 
 onSignIn();
-
-// obtener datos del perfil
-var singin = googleUser.getBasicProfile();
-// guarda los dato en el session storage
-sessionStorage.setItem("Perfil", singin); 
-
 
 
