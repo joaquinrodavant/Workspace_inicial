@@ -13,11 +13,11 @@ document.getElementById("submit").addEventListener("click", function () {
     var contra = document.getElementById("inputPassword").value;
 
 
-    // guarda los datos en session storage
-    sessionStorage.setItem("Dirección correo electronico", corr);
-    sessionStorage.setItem("Contraseña", contra);
+    // guarda los datos en local storage
+    localStorage.setItem("Dirección correo electronico", corr);
+    localStorage.setItem("Contraseña", contra);
 });
-
+// google sign in
 function onSignIn(googleUser) {
     var profile = googleUser.getBasicProfile();
     console.log("ID: " + profile.getId()); // Don't send this directly to your server!

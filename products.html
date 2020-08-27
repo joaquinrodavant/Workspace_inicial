@@ -13,6 +13,13 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <style>
+    .iconoPerfil {
+      width: 40px;
+      border-radius: 20px;
+    }
+    
+  </style>
 </head>
 
 <body>
@@ -23,13 +30,70 @@
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
       <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+      <!--Perfil logueado-->
+      <div>
+        <img class="iconoPerfil" src="img/icono perfil.png" alt="">
+        <a class="py-2 d-none d-md-inline-block" id="user" href="my-profile.html"></a>
+      </div>
+
     </div>
   </nav>
 
+  <!--Filtro-->
+  <main role="main" class="pb-5">
+    <div class="text-center p-4">
+      <h2>Productos</h2>
+      <p class="lead">Verás aquí todas los productos del sitio.</p>
+      <div id="pep">
+        <input id="buscador" type="search" placeholder="Busqueda" />
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col text-right">
+          <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+            <div class="col">
+              <p class="font-weight-normal text-right my-2">Precio.</p>
+            </div>
+            <label class="btn btn-light active" id="sortAsc">
+              <input type="radio" name="options" autocomplete="off" checked>Ascendente
+            </label>
+            <label class="btn btn-light" id="sortDesc">
+              <input type="radio" name="options" autocomplete="off">Descendente
+            </label>
+            <label class="btn btn-light" id="sortByCount">
+              <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-down mr-1"></i>Relev.
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-end">
+        <div class="col-md-6"></div>
+        <div class="col-md-6 col-sm-12 mb-1 container">
+          <div class="row container p-0 m-0">
+            
+            <div class="col">
+              <p class="font-weight-normal text-right my-2">Precio.</p>
+            </div>
+            <div class="col">
+              <input class="form-control" type="number" placeholder="min." id="rangeFilterCountMin">
+            </div>
+            <div class="col">
+              <input class="form-control" type="number" placeholder="máx." id="rangeFilterCountMax">
+            </div>
+            <div class="col-3 p-0">
+              <div class="btn-group" role="group">
+                <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
+                <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <div id="products-list">
-
-  </div>
+      <div id="products-list"></div>
+  </main>
 
   <footer class="text-muted bg-light">
     <div class="container">
