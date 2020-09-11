@@ -112,7 +112,7 @@ function newComent() {
     html += `
         <div class="list-group-item">
             <div class="d-block mb-4 h-100">
-                <h5> <strong> `+ localStorage.getItem("datos") + ` </strong> </h5>
+                <h5> <strong> `+ localStorage.getItem("Dirección correo electronico") + ` </strong> </h5>
                 <span id="newcomentscore"> </span>
                 <p class="small"> Fecha ` + newdate + `  </p>
                 <div> ` + ncoment + ` </div>
