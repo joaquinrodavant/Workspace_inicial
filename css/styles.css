@@ -143,3 +143,25 @@ a.custom-card:hover {
 #pep{
   margin-left: 920px;
 }
+
+/*estrellas*/
+/* Oculta los input*/
+.rating > input[type = "radio"]{
+   display:none;
+  }
+
+.rating > input[type="radio"]:checked ~ label {
+  color: orange;
+}
+
+.rating {
+  direction: rtl;
+}
+rating > span {
+  display: inline-block;
+  position: relative;
+}
+.rating > label:hover,
+.rating > label:hover ~ label {
+  color: orange;
+}

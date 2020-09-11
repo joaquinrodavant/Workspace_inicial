@@ -46,5 +46,5 @@ var getJSONData = function(url){
 document.addEventListener("DOMContentLoaded", function(e){
 });
 //Mosrtar nombre de usuario
-var user = localStorage.getItem("Dirección correo electronico");
+var user = localStorage.getItem("datos");
 document.getElementById("user").innerHTML = "Bienvenido: " + user

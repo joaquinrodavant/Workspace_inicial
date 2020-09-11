@@ -46,6 +46,7 @@ function showProductsList() {
 
 
             htmlContentToAppend += `
+            <a href="product-info.html" class="list-group-item list-group-item-action">
         <div class="list-group-item list-group-item-action">
             <div class="row">
                 <div class="col-3">
@@ -56,7 +57,7 @@ function showProductsList() {
                         <h4 class="data" class="mb-1">`+ product.name + `</h4>
                         <h5> `+ product.currency + " " + product.cost + `</h5>
                     </div>
-                    <div class="desc">  `+ product.description + ` </div>
+                    <div>  `+ product.description + ` </div>
                   <div>
                     <small class="text-muted">` + product.soldCount + ` artículos</small>
                   </div>
@@ -83,22 +84,7 @@ function sortAndShowProducts(sortCriteria, productsArray) {
     //Muestro las categorías ordenadas
     showProductsList();
 }
-// Buscador en tiempo real.
-//var search = document.getElementById("buscador");
-//var texto = search.value.toLowerCase();
-//var ProArray = [];
-//var div = document.getElementById("products-list").getElementsByClassName("div");
-
-//function buscarProduct() {
-//for (let i = 0; i < ProArray.length; i++) {
-//let product = ProArray[i];
-//let nombre = product.name;
-//if (nombre.toLowerCase().indexOf(texto) !== -1) {
-//showProductsList(ProArray);
-//} 
-
-//}
-//}
+// Buscador en tiempo real por nombre.
 function myFunction() {
     var texto, div, search, x, i, txtValue;
     search = document.getElementById("buscador");
