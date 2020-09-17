@@ -165,3 +165,10 @@ rating > span {
 .rating > label:hover ~ label {
   color: orange;
 }
+/*Menu desplegable*/
+.menu-desplegable {
+  margin-left: 10px;
+}
+.menu-desplegable:hover {
+  background-color: #F2F3F4 ;
+}

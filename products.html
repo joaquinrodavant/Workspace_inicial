@@ -18,7 +18,6 @@
       width: 40px;
       border-radius: 20px;
     }
-    
   </style>
 </head>
 
@@ -29,12 +28,24 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-      <!--Perfil logueado-->
-      <div>
+      <!--Menu desplegable-->
+      <div class="dropdown">
         <img class="iconoPerfil" src="img/icono perfil.png" alt="">
-        <a class="py-2 d-none d-md-inline-block" id="user" href="my-profile.html"></a>
+        <button class="btn btn-dark dropdown-toggle" type="button" id="user" data-toggle="dropdown">
+        </button>
+        <div class="dropdown-menu" role="menu" aria-labelledby="user">
+          <li><a role="menuitem" href="cart.html" class="menu-desplegable"> Mi carrito. <span> <img
+                  src="img/icono carrito.png" alt="" width="45"></span> </a>
+          </li>
+          <li><a role="menuitem" href="my-profile.html" class="menu-desplegable"> Mi perfil. <span><img
+                  src="img/perfil menu.jpg" alt="" width="25"></span> </a>
+          </li>
+          <li><a role="menuitem" href="index.html" onclick="cerrarSesion()" class="menu-desplegable"> Cerrar sesion.
+              <span><img src="img/icono cerrar.png" alt="" width="35"></span> </a>
+          </li>
+        </div>
       </div>
+      <!---->
 
     </div>
   </nav>
@@ -48,7 +59,7 @@
         <input id="buscador" type="search" placeholder="Busqueda" />
       </div>
     </div>
-    
+
     <div class="container">
       <div class="row">
         <div class="col text-right">
@@ -72,7 +83,7 @@
         <div class="col-md-6"></div>
         <div class="col-md-6 col-sm-12 mb-1 container">
           <div class="row container p-0 m-0">
-            
+
             <div class="col">
               <p class="font-weight-normal text-right my-2">Precio.</p>
             </div>

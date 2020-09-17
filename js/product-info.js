@@ -3,25 +3,33 @@ var productlist = [];
 var productComent = [];
 var newcoment = [];
 var estrellas = 0;
-//Funcion que muestra las Imagenes
+//Funcion que muestra las Imagenes en un carrusel
 function showImagesGallery(array) {
 
-    let htmlContentToAppend = "";
+    let html = "";
+    let htmlImages = "";
 
     for (let i = 0; i < array.length; i++) {
         let imageSrc = array[i];
-
-        htmlContentToAppend += `
-        <div class="col-lg-3 col-md-4 col-6">
-            <div class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="` + imageSrc + `" alt="">
-            </div>
-        </div>
-        `
-
-        document.getElementById("productImages").innerHTML = htmlContentToAppend;
+        //for que controla los li con clase "active"
+        if (i == 0) {
+            html += `<li data-target="#carouselExampleIndicators" data-slide-to="` + i + `" class="active"></li>`
+            htmlImages += `
+                     <div class="carousel-item active">
+                       <img src="`+ imageSrc + `" class="d-block w-100" alt="...">
+                     </div>
+        `} else {
+            html += `<li data-target="#carouselExampleIndicators" data-slide-to="` + i + `"</li>`
+            htmlImages +=
+                ` <div class="carousel-item">
+                    <img src="`+ imageSrc + `" class="d-block w-100" alt="...">
+                  </div>`
+        }
     }
+    document.getElementById("productImages").innerHTML = htmlImages;
+    document.getElementById("carrusel").innerHTML = html
 }
+
 //Funcion que muestra Prouctos relacionados
 function showProuctsRealated(array) {
     getJSONData(PRODUCTS_URL).then(function (resultObj) {
@@ -29,7 +37,7 @@ function showProuctsRealated(array) {
             productlist = resultObj.data;
 
             let htmlContentToAppend = "";
-
+           //Cada elemento de array lo pasa como posicion en productlist
             for (let i = 0; i < array.length; i++) {
                 let relatedPosition = array[i];
                 let productrelated = productlist[relatedPosition];
@@ -123,9 +131,9 @@ function newComent() {
 }
 //Funcion que muestra las estrellas de los nuevos comentarios
 function newShowRating() {
-    let rating = estrellas 
+    let rating = estrellas
     let html = "";
-    let newstars= "";
+    let newstars = "";
 
     for (let i = 1; i <= 5; i++) {
         if (i <= rating) {
@@ -201,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
         //Bloquea el boton Publicar luego de hacer un comentario
         publicar.disabled = true;
         //Vacia textarea luego de comentar
-        document.getElementById("opinion").value= "";
+        document.getElementById("opinion").value = "";
     });
 
 });
