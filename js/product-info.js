@@ -87,7 +87,7 @@ function showRating(array) {
         let htmlstars = ""
         let rating = array[i].score;
         let stars = "";
-
+        //Con el for va agregando estrellas pintadas segun el numero de score y agrega el resto sin pintar hasta llegar a 5 estrellas.
         for (let i = 1; i <= 5; i++) {
             if (i <= rating) {
                 stars += '<i class="fa fa-star checked"></i>';
@@ -134,7 +134,7 @@ function newShowRating() {
     let rating = estrellas
     let html = "";
     let newstars = "";
-
+    //Con el for va agregando estrellas pintadas segun el value del radio clickeado y agrega el resto sin pintar hasta llegar a 5 estrellas.
     for (let i = 1; i <= 5; i++) {
         if (i <= rating) {
             newstars += '<i class="fa fa-star checked"></i>';
