@@ -119,3 +119,17 @@
  .nombre {
      width: 40%;
  }
+ #botonModal {
+    margin-left: 25px;
+    margin-right: 25px;
+ }
+ .card {
+     border-color: white;
+ }
+
+.table-responsive {
+    background-color: #eeeeee;
+}
+.table {
+    border-color: #eeeeee;
+}
