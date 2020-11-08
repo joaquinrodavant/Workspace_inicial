@@ -66,39 +66,90 @@
     </div>
   </nav>
 
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 7 (Fecha de entrega: 8/11/202020) -> Punto 1 y 2.</p>
+  <div class="row perfil">
+    <!-- Lista donde se muestran los datos guardados -->
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="text-center" id="perfilFoto">
+        <img src="img/perfilAvatar.jpg" class="avatar img-circle img-thumbnail" id="hijo" alt="avatar" width="40%">
+        <h6>Subir una foto diferente...</h6>
+        <input type="file" class="text-center center-block well well-sm col-12">
+      </div>
       <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+      <ul class="list-group col">
+        <li class="list-group-item text-muted">Datos personales: <i class="fa fa-dashboard fa-1x"></i></li>
+        <li class="list-group-item"><span class="pull-left"><strong>Nombres:</strong></span> <span id="name"></span></li>
+        <li class="list-group-item"><span class="pull-left"><strong>Apellidos:</strong></span> <span id="lastname"></span> </li>
+        <li class="list-group-item"><span class="pull-left"><strong>Edad:</strong></span> <span id="age"></span> </li>
+        <li class="list-group-item"><span class="pull-left"><strong>E-mail:</strong></span> <span id="mail"></span></li>
+        <li class="list-group-item"><span class="pull-left"><strong>Telefono:</strong></span> <span id="phone"></span></li>
+      </ul> 
     </div>
-  </div>
-  <footer class="text-muted bg-light">
-    <div class="container">
-      <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
-      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+    
+    <!-- Formulario de edicion -->
+    <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
+      <br>
+      <h3>Editar informacion personal</h3>
+      <form class="form">
+        <div class="row">
+        <div class="form-group col-md-5">
+          <label for="nombres">Nombres:</label>
+          <input class="form-control form-control" type="text" id="nombre" placeholder="Ingresa tu nombre completo" name="nombre" required="">
+        </div>
+        <div class="form-group col-md-5">
+          <label for="apellido">Apellidos:</label>
+          <input class="form-control form-control" type="text" id="apellido" placeholder="Ingresa tu apellido completo" name="apellido" required>
+        </div>
+        <div class="form-group col-md-5">
+          <label for="edad">Edad:</label>
+          <input class="form-control form-control" type="number" id="edad" placeholder="Ingresa tu edad" name="edad" required>
+        </div>
+        <div class="form-group col-md-5">
+          <label for="email">E-mail:</label>
+          <input class="form-control form-control" type="email" id="email" placeholder="Ingresa tu e-mail" name="edad" required>
+        </div>
+        <div class="form-group col-md-5">
+          <label for="telefono">Télefono de contacto:</label>
+          <input class="form-control form-control" type="number" id="telefono" placeholder="Ingresa tu telefono de contacto" name="edad" required>
+        </div>
+        <div class="form-group col-md-5">
+          <label for="nombres">Insertar URL de la imagen:</label>
+          <input class="form-control form-control" type="text" id="imagen" placeholder="Ingresa url de la imagen" name="nombre" required>
+        </div>
+      </div>
+      <div class="boton">
+        <button class="btn btn-primary mb-2 col-2" id="guardar" type="sub">Guardar</button>
+      </div>
+      </form>
     </div>
-  </footer>
-  <div class="alert fade alert-success" role="alert" id="alertResult">
-    <span id="resultSpan"></span>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
+    
   </div>
-  <div id="spinner-wrapper">
-    <div class="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </div>
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/dropzone.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/my-profile.js"></script>
+
+      <footer class="text-muted bg-light">
+        <div class="container">
+          <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
+          <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+        </div>
+      </footer>
+      <div class="alert fade alert-success" role="alert" id="alertResult">
+        <span id="resultSpan"></span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="spinner-wrapper">
+        <div class="lds-ring">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <script src="js/jquery-3.4.1.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/dropzone.js"></script>
+      <script src="js/init.js"></script>
+      <script src="js/my-profile.js"></script>
+  
 </body>
 
 </html>

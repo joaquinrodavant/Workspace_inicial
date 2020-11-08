@@ -34,9 +34,9 @@ function sortProducts(criteria, array) {
     return result;
 }
 
-//var productsArray = [];
 
-function showProductsList() {
+// Funcion que muestra los productos en un card
+function showProducts() {
     let htmlContentToAppend = "";
     for (let i = 0; i < currentProductsArray.length; i++) {
         let product = currentProductsArray[i];
@@ -46,25 +46,25 @@ function showProductsList() {
 
 
             htmlContentToAppend += `
-            <a href="product-info.html" class="list-group-item list-group-item-action">
-        <div class="list-group-item list-group-item-action">
-            <div class="row">
-                <div class="col-3">
-                    <img src="` + product.imgSrc + `" alt="` + product.name + `" class="img-thumbnail">
-                </div>
-                <div class="col">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h4 class="data" class="mb-1">`+ product.name + `</h4>
-                        <h5> `+ product.currency + " " + product.cost + `</h5>
-                    </div>
-                    <div>  `+ product.description + ` </div>
-                  <div>
-                    <small class="text-muted">` + product.soldCount + ` artículos</small>
+<div class="col-md-4">            
+    <a href="product-info.html" class="shadow-sm custom-card">
+            
+        <div class="card mb-4 shadow-sm">
+            <img class="card-img-top img-fluid" src="` + product.imgSrc + `" alt="`+product.description+`">
+            <div class="card-body">
+                <h5 class="card-text">`+ product.name + `</h5>
+                <p class="card-text">`+ product.description + `</p>   
+               <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <p class="card-text"> `+ product.currency + " " + product.cost + `</p>
                   </div>
+                   <small class="text-muted">` + product.soldCount + ` artículos</small>
+                  
                 </div>
-                
             </div>
         </div>
+    </a>
+</div>    
         `
         }
         document.getElementById("products-list").innerHTML = htmlContentToAppend;
@@ -82,7 +82,7 @@ function sortAndShowProducts(sortCriteria, productsArray) {
     currentProductsArray = sortProducts(currentSortCriteria, currentProductsArray);
 
     //Muestro las categorías ordenadas
-    showProductsList();
+    showProducts();
 }
 // Buscador en tiempo real por nombre.
 function myFunction() {
@@ -103,6 +103,8 @@ function myFunction() {
         }
     }
 }
+
+
 
 
 //Función que se ejecuta una vez que se haya lanzado el evento de
@@ -138,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
         minCost = undefined;
         maxCost = undefined;
 
-        showProductsList();
+        showProducts()
     });
 
     document.getElementById("rangeFilterCount").addEventListener("click", function () {
@@ -160,7 +162,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
         else {
             maxCost = undefined;
         }
-
-        showProductsList();
+        showProducts();
     });
 });

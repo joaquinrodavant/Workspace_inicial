@@ -140,9 +140,7 @@ a.custom-card:hover {
   color: orange;
 }
 
-#pep{
-  margin-left: 920px;
-}
+
 
 /*estrellas*/
 /* Oculta los input*/
@@ -171,5 +169,34 @@ rating > span {
 }
 .menu-desplegable:hover {
   background-color: #F2F3F4 ;
+}
+.img-thumbnail{
+  border: white;
+}
+.perfil{
+  width: 100%;
+}
+#buscador1 {
+  margin-right: 100px;
+}
+@media (max-width:540px){
+  #filtro {
+    display: block;
+    margin-left: auto;
+    width: 70%;
+  }
+  #buscador1 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.nav-item {
+  list-style:none;
+  padding-top: 4px;
+}
+@media (min-width:1024px){
+  .navbar {
+    height:48px;
+  }
 }
 
