@@ -46,7 +46,7 @@ function redireccionar() {
   var contraseña = localStorage.getItem("Contraseña");
   var googleCuenta = localStorage.getItem("Usuario google");
   // Si no hay datos guardados en las variables redirecciona a login
-  if ((correo == null && contraseña == null) || googleCuenta == null) {
+  if (correo == null && contraseña == null || googleCuenta == null) {
       window.location.replace("login.html");
   }
 }
