@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function(e){
 });
 //Mosrtar nombre de usuario
 var user = localStorage.getItem("Dirección correo electronico");
+user = localStorage.getItem("Usuario google");
 document.getElementById("user").innerHTML = "Bienvenido: " + user
 //Funcion para cerrar sesion
 function cerrarSesion() {
