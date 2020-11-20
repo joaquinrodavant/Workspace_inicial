@@ -40,6 +40,7 @@ var getJSONData = function(url){
     });
 }
 
+
 function redireccionar() {
   // Variables que obtienen lo guardado en lo localStorage
   var correo = localStorage.getItem("Dirección correo electronico");
