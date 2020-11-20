@@ -4,7 +4,6 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <title>eMercado - Todo lo que busques está aquí</title>
@@ -146,7 +145,7 @@
                 <div class="invalid-feedback">
                   Ingresa un número de domicilio
                 </div>
-                <label for="pais">País</label>
+                <label for="pais" id="paisEnvio">País</label>
                 <select name="pais" class="form-control form-control-sm">
                   <!--lista de paises-->
                   <option value="Elegir" id="AF" disabled>Elegir opción</option>
@@ -424,7 +423,7 @@
                 <dd class="text-right text-dark b ml-3"><strong id="totalcost"></strong></dd>
               </dl>
               <hr> <button id="enviar" type="submit" class="btn btn-out btn-primary btn-square btn-main"
-                data-abc="true">
+                data-abc="true" onclick="compra()">
                 Realizar Compra </button>
               <a href="products.html" class="btn btn-out btn-success btn-square btn-main mt-2" data-abc="true">
                 Continuar Comprando</a>
