@@ -44,9 +44,8 @@ function redireccionar() {
   // Variables que obtienen lo guardado en lo localStorage
   var correo = localStorage.getItem("Dirección correo electronico");
   var contraseña = localStorage.getItem("Contraseña");
-  var googleCuenta = localStorage.getItem("Usuario google");
   // Si no hay datos guardados en las variables redirecciona a login
-  if (correo == null && contraseña == null || googleCuenta == null) {
+  if (correo == null && contraseña == null) {
       window.location.replace("login.html");
   }
 }
@@ -59,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function(e){
 });
 //Mosrtar nombre de usuario
 var user = localStorage.getItem("Dirección correo electronico");
-user = localStorage.getItem("Usuario google");
+//user = localStorage.getItem("Usuario google");
 document.getElementById("user").innerHTML = "Bienvenido: " + user
 //Funcion para cerrar sesion
 function cerrarSesion() {

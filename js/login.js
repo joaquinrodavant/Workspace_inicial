@@ -26,7 +26,8 @@ function onSignIn(googleUser) {
     console.log('Family Name: ' + profile.getFamilyName());
     console.log("Image URL: " + profile.getImageUrl());
     console.log("Email: " + profile.getEmail());
-    localStorage.setItem("Usuario google", profile.getName());
+    localStorage.setItem("Dirección correo electronico", profile.getEmail());
+    localStorage.setItem("Contraseña", profile.getName());
 
     // The ID token you need to pass to your backend:
     var id_token = googleUser.getAuthResponse().id_token;

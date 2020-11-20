@@ -115,7 +115,6 @@ function newComent() {
     let newdate = A + "-" + B + "-" + C + " " + D + ":" + E + ":" + F;
     let ncoment = document.getElementById("opinion").value;
     var usuario = localStorage.getItem("Dirección correo electronico");
-    usuario = localStorage.getItem("Usuario google");
 
     let html = "";
 
